@@ -9,7 +9,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
-add_executable(CVAim src/gptcode.cpp src/vendor/SerialPort/SerialPort.cpp src/functions.cpp)
+add_executable(CVAim src/main.cpp src/functions.cpp src/getJson.h src/getJson.cpp)
 
 set(OpenCV_LIBS opencv_core opencv_imgproc opencv_highgui opencv_imgcodecs)
 

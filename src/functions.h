@@ -4,8 +4,9 @@
 #ifndef CVAIM_FUNCTIONS_H
 #define CVAIM_FUNCTIONS_H
 
+#ifndef LOG
 #define LOG(x) std::cout << x << std::endl
-
+#endif
 
 
 using namespace cv;
@@ -32,6 +33,13 @@ template<class T>
 Point_<T> limitVec(Point_<T> v, T maxAimVecLen) {
     float vLen = vecLength(v);
     if (vLen > maxAimVecLen) v = maxAimVecLen * v / vLen;
+    return v;
+}
+
+template<class T>
+Point_<T> limitVecRect(Point_<T> v, Rect_<T> r) {
+    v.x = min(max(v.x, r.tl().x), r.br().x);
+    v.y = min(max(v.y, r.tl().y), r.br().y);
     return v;
 }
 
