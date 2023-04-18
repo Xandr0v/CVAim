@@ -1,0 +1,23 @@
+dnnModelFile = face_detection/res_ssd_300Dim.caffeModel
+dnnConfigFile = face_detection/weights.prototxt
+dnnCrop = 0
+dnnSwapRB = 0
+capSource = 0
+showWindow = 1
+dnnMeanVal = 104, 177, 123
+
+port = \\.\COM5
+confidenceThreshold = 0.3
+dnnRes = 300, 300
+baudRate = 9600
+vecRect = -100.0, -100.0, 200.0, 200.0
+aimRadius = 50
+windowName = CVFaceAimv3
+
+dataFormat = %04.f_%04.f
+delay = 1
+
+xc = 3.00
+yc = 0.33
+
+
