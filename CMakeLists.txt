@@ -9,7 +9,8 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
-add_executable(CVAim src/main.cpp src/functions.cpp src/getJson.h src/getJson.cpp)
+
+add_executable(CVAim src/main.cpp src/functions.cpp src/vendor/json/getJson.h src/vendor/json/getJson.cpp src/parser.cpp src/parser.h)
 
 set(OpenCV_LIBS opencv_core opencv_imgproc opencv_highgui opencv_imgcodecs)
 
